@@ -1,0 +1,166 @@
+    // Properties
+    private String petType;
+    private String petName;
+    private int petAge;
+    private int dogSpaces;
+    private int catSpaces;
+    private int daysStay;
+    private double amountDue;
+
+    // Constructor
+    public Pet() {
+        // Default constructor
+        this.petType = "DEFAULT";
+        this.petName = "DEFAULT";
+        this.petAge = 0;
+        this.dogSpaces = -1;
+        this.catSpaces = -1;
+        this.daysStay = -1;
+        this.amountDue = -1.0;	
+    }
+
+    public Pet(String petType, String petName, int petAge, int daysStay, int dogSpaces, int catSpaces, double amountDue) {
+        this.petType = petType;
+        this.petName = petName;
+        this.petAge = petAge;
+        this.daysStay = daysStay;
+        this.dogSpaces = dogSpaces;
+        this.catSpaces = catSpaces;
+        this.amountDue = amountDue;
+    }
+
+
+    // Accessors and Mutators
+    public String getPetType() {
+        return petType;
+    }
+
+    public void setPetType(String petType) {
+        this.petType = petType;
+    }
+
+    public String getPetName() {
+        return petName;
+    }
+
+    public void setPetName(String petName) {
+        this.petName = petName;
+    }
+
+    public int getPetAge() {
+        return petAge;
+    }
+
+    public void setPetAge(int petAge) {
+        this.petAge = petAge;
+    }
+
+    public int getDogSpaces() {
+        return dogSpaces;
+    }
+
+    public void setDogSpaces(int dogSpaces) {
+        this.dogSpaces = dogSpaces;
+    }
+
+    public int getCatSpaces() {
+        return catSpaces;
+    }
+
+    public void setCatSpaces(int catSpaces) {
+        this.catSpaces = catSpaces;
+    }
+
+    public int getDaysStay() {
+        return daysStay;
+    }
+
+    public void setDaysStay(int daysStay) {
+        this.daysStay = daysStay;
+    }
+
+    public double getAmountDue() {
+        return amountDue;
+    }
+
+    public void setAmountDue(double amountDue) {
+        this.amountDue = amountDue;
+    }
+
+    // Method to calculate amount due (example)
+    public double calculateAmountDue() {
+        // Implementation logic for amount calculation
+        return amountDue;
+    }
+
+    // toString() method
+    @Override
+    public String toString() {
+        return "Pet{" +
+                "petType='" + petType + '\'' +
+                ", petName='" + petName + '\'' +
+                ", petAge=" + petAge +
+                ", dogSpaces=" + dogSpaces +
+                ", catSpaces=" + catSpaces +
+                ", daysStay=" + daysStay +
+                ", amountDue=" + amountDue +
+                '}';
+    }
+}
+
+
+
+
+
+
+
+Yes, you can combine the two constructors into a single constructor by providing default values for the additional parameters. Here's how you can do it:
+
+```java
+public class Pet {
+    // Properties
+    private String petType;
+    private String petName;
+    private int petAge;
+    private int dogSpaces;
+    private int catSpaces;
+    private int daysStay;
+    private double amountDue;
+
+    // Combined constructor
+    public Pet(String petType, String petName, int petAge, int daysStay, int dogSpaces, int catSpaces, double amountDue) {
+        this.petType = petType;
+        this.petName = petName;
+        this.petAge = petAge;
+        this.daysStay = daysStay;
+        this.dogSpaces = dogSpaces;
+        this.catSpaces = catSpaces;
+        this.amountDue = amountDue;
+    }
+
+    // Accessors and Mutators
+    // (Same as before)
+
+    // Method to calculate amount due (example)
+    public double calculateAmountDue() {
+        // Implementation logic for amount calculation
+        return amountDue;
+    }
+
+    // toString() method
+    @Override
+    public String toString() {
+        return "Pet{" +
+                "petType='" + petType + '\'' +
+                ", petName='" + petName + '\'' +
+                ", petAge=" + petAge +
+                ", dogSpaces=" + dogSpaces +
+                ", catSpaces=" + catSpaces +
+                ", daysStay=" + daysStay +
+                ", amountDue=" + amountDue +
+                '}';
+    }
+}
+```
+
+In this combined constructor, all attributes are included, but you can create a `Pet` object using only the essential parameters, and the additional parameters will take default values (usually 0 for integers and 0.0 for doubles). This allows for flexibility when creating instances of the `Pet` class. If you provide all parameters, the object will be fully initialized. If you provide only the essential parameters, the object will still be created, and the additional attributes will be set to their default values.
