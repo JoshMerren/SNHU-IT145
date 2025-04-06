@@ -1,0 +1,35 @@
+Lab 2.17.1 Driving Cost
+
+import java.util.Scanner;
+
+public class LabProgram {
+   
+   //Calculates the cost of drivinf a specified number of miles
+   //based on the vehicle's miles per gallon and the cost of fuel per gallon
+   public static double drivingCost(double milesPerGallon, double dollarsPerGallon, double drivenMiles){
+      
+      //Calculate the totalcost: (drivenmiles / efficiency) * fuel cost
+      double totalCost = (drivenMiles / milesPerGallon) * dollarsPerGallon;
+      return totalCost;
+   }
+   
+   
+   public static void main(String[] args) {
+      Scanner scnr = new Scanner(System.in);
+      
+      // Variables to store miles per gallon and cost per gallon 
+      double milesPerGallon;
+      double dollarsPerGallon;
+      
+      // Read input for miles per gallon and cost per gallon
+      milesPerGallon = scnr.nextDouble();
+      dollarsPerGallon = scnr.nextDouble();
+      
+      // Calculate and print the cost for 10 miles
+      System.out.printf("%.2f ", drivingCost(milesPerGallon, dollarsPerGallon, 10));
+      // Calculate and print the cost for 50 miles
+      System.out.printf("%.2f ", drivingCost(milesPerGallon, dollarsPerGallon, 50));
+      // Calculate and print the cost for 400 miles
+      System.out.printf("%.2f\n", drivingCost(milesPerGallon, dollarsPerGallon, 400));
+   }
+}
