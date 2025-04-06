@@ -1,0 +1,29 @@
+Lab 3.36.1 
+
+
+import java.util.Scanner;
+
+public class LabProgram {
+   public static void main(String[] args) {
+      Scanner scnr = new Scanner(System.in);
+      String userText;
+      
+      int charCount = 0;  // Variable to keep track of the count of valid characters
+   
+      userText = scnr.nextLine();  // Gets entire line, including spaces. 
+
+      // Iterating through each character in the string
+      for (int i = 0; i < userText.length(); i++) {
+         char currentChar = userText.charAt(i);  // Get the character at the current position
+
+          // Check if the current character is not a space, period, exclamation point, or comma
+         if (currentChar != ' ' && currentChar != '.' && currentChar != '!' && currentChar != ',') {
+            charCount++;  // Increment the count of valid characters
+         }
+      }
+
+      // Output the count of valid characters
+      System.out.println(charCount);
+
+   }
+}
