@@ -1,0 +1,42 @@
+Lab 1.38.1 Variables, input, and casting
+
+import java.util.Scanner;
+
+public class BasicInput {
+   public static void main(String[] args) {
+      Scanner scnr = new Scanner(System.in);
+      // Variables to store user inputs
+      int userInt = 0;           
+      double userDouble = 0.0;
+      char userChar = 'a';
+      String userStr = "Yo";
+      
+      // Prompt the user and read an integer value
+      System.out.println("Enter integer: ");
+      userInt = scnr.nextInt();
+      
+      // Prompt the user and read a double value
+      System.out.println("Enter double: ");
+      userDouble = scnr.nextDouble();
+      
+      // Prompt the user and read a character
+      System.out.println("Enter character: ");
+      userChar = scnr.next().charAt(0);
+      
+      // Prompt the user and read a string
+      System.out.println("Enter string: ");
+      userStr = scnr.next();
+      
+      // Output the values in the order they were entered
+      System.out.println(userInt + " " + userDouble + " " + userChar + " " + userStr);
+      
+      // Output the values in reverse order
+      System.out.println(userStr + " " + userChar + " " + userDouble + " " + userInt);
+      
+      // Cast the doulble to an integer and output the result
+      System.out.println(userDouble + " cast to an integer is " + (int)(userDouble));
+      
+      
+      return;
+   }
+}
