@@ -1,0 +1,39 @@
+
+Lab 1.37.1 Basic output with variables
+
+import java.util.Scanner; 
+
+public class OutputWithVars {
+   public static void main(String[] args) {
+      Scanner scnr = new Scanner(System.in);
+      // Variables to store user inputs
+      int userNum = 0;
+      int userNum2 = 0;
+      
+      // Prompt the user to enter the first integer
+      System.out.println("Enter integer: ");
+      userNum = scnr.nextInt();
+      
+      // Output the first entered interger
+      System.out.println("You entered: " + userNum);
+      
+      // Calculate and display the square of the first integer
+      System.out.println(userNum + " squared is " + (userNum * userNum));
+      
+      // Calculate and display the cube of the first integer
+      System.out.println("And " + userNum + " cubed is " + (userNum * userNum * userNum) + "!!");
+      
+      // Prompt the user to enter the second integer
+      System.out.println("Enter another integer: ");
+      userNum2 = scnr.nextInt();
+      
+      // Calculate and display the sum of the first and second integers
+      System.out.println(userNum + " + " + userNum2 + " is " + (userNum + userNum2));
+      
+      // Calculate and display the product of the first and second integers
+      System.out.println(userNum + " * " + userNum2 + " is " + (userNum * userNum2));
+      
+      
+      return;
+   }
+}
